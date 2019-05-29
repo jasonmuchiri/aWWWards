@@ -104,4 +104,4 @@ For help and support feel free to contact me : jasonmkinyua@gmail.com
 
 > MIT License
 
-> Copyright (c) 2019 cooldragon
+> Copyright (c) 2019 _cooldragon_
