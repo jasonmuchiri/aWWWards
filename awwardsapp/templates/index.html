@@ -2,4 +2,74 @@
 {% block content %}
 {{block.super}}
 
+<div class="btn1 btn container-fluid" style="background-image: url(https://assets.awwwards.com/awards/media/cache/optimize/sites_of_the_day/2018/10/digital-designer-cool-cover.jpg)">
+    <div class="header" style="height: 80vh; font-family: 'Encode Sans Expanded', sans-serif;">
+        <div class="container" style="color:white;">
+            <div class="row" style="padding-top:50px;">
+                <div class="col-md-4">
+                    <strong>Site of the day</strong> {{date|date:"F d, Y"}}
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <a class="btn" href="" style="color:white;">Collect</a>
+                </div>
+            </div>
+            <div style="text-align:center; font-size: 70px; padding-top:30px; letter-spacing: 1px;">
+                <p>digitaldesigner-cool</p>
+            </div>
+            <div style="text-align:center;">
+                <p>BY <strong style="color:#49c5b6;">EID STARNLEY</strong> FROM KENYA WITH <strong>7.35</strong></p>
+            </div>
+            <div style="height:230px;">
+
+            </div>
+            <div>
+                <div id="box" class="col-md-4">
+                    <button class="btn" style=" border-radius: 5em; background-color: #49c5b6; border:none; padding: 2px; width: 80px;"><a
+                            target="blank" style="color: white; text-decoration:none;" href="http://www.digitaldesigner.cool/">Visit</a></button>
+                    <button class="btn" style="color: white; border-radius: 5em; background-color: transparent; border:1px solid #49c5b6; padding: 2px; width: 80px;">
+                        likes </button>
+                    <button class="btn" style="color: white; border-radius: 5em; background-color: transparent; border:1px solid white; padding: 2px; width: 80px;">Collect</button>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container-fluid" style="margin-bottom: 10px;  padding-left:55px; padding-right:55px; font-family: 'Raleway', sans-serif;">
+        <div class="" style=" padding-bottom:20px;">
+            <h5><strong>Nominees</strong> We need your vote!</h5>
+        </div>
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-md-3" style="margin-bottom:25px;">
+                <div id="image" class="hover02 column body">
+                    <figure><a target="blank" href="{%url 'vote' post_id=post.id%}"><img class="img-responsive" src="{{post.image.url }}"
+                                width="100%" ; height="200px" ;></a></figure>
+                </div>
+                <div class="card-header" style="background-color:white; font-size: 13px; margin-top:0px;">
+                    <p><strong>{{post.sitename}}</strong></p>
+                    From {{post.country}} &nbsp; &nbsp; &nbsp; {{post.post_date}}
+                    <div class="text2">
+                        <a target="blank" href="{{post.url}}" style="color:black; text-decoration:none;"><strong>Visit</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer" style="background-color:white;">
+                    <p>By <strong>{{post.user}}</strong></p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% for post in posts %}
+
+{% endfor %}
+
 {% endblock %}
