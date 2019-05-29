@@ -1,14 +1,14 @@
 
 from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse, Http404,HttpResponseRedirect
-from awwardsmain.models import Post, Profile
+from . models import Post, Profile
 from django.contrib.auth.models import User
-from .forms import NewPostForm, UserForm, ProfileForm 
+from . forms import NewPostForm, UserForm, ProfileForm 
 from django.contrib.auth.decorators import login_required
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import Post, Profile
-from .serializer import PostSerializer,ProfileSerializer
+from . models import Post, Profile
+from . serializer import PostSerializer,ProfileSerializer
 import datetime as dt
 
 @login_required(login_url='/accounts/login/')
