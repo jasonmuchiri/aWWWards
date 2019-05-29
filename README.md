@@ -4,7 +4,7 @@
 
 ## Description
 
-aWWWards is a web app where users submit their projects and other users get to review and rate them.The inspiration of this project is from the [awwwards](https://www.awwwards.com/) app.
+aWWWards is a web app where users submit their projects and other users get to review and rate them.The inspiration behind this project is from the [awwwards](https://www.awwwards.com/) app.
 
 ### User Story
 
