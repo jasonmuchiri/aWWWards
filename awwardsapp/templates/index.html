@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 {{block.super}}
+    <link rel="stylesheet" href="{%   static 'star-ratings/css/star-ratings.css' %}">
 
 <div class="btn1 btn container-fluid" style="background-image: url(https://assets.awwwards.com/awards/media/cache/optimize/sites_of_the_day/2018/10/digital-designer-cool-cover.jpg)">
     <div class="header" style="height: 80vh; font-family: 'Encode Sans Expanded', sans-serif;">
@@ -54,7 +56,11 @@
                 </div>
                 <div class="card-header" style="background-color:white; font-size: 13px; margin-top:0px;">
                     <p><strong>{{post.sitename}}</strong></p>
-                    From {{post.country}} &nbsp; &nbsp; &nbsp; {{post.post_date}}
+                    <p class="size">From {{post.country}} &nbsp; {{post.post_date}}</p>
+
+                    {% load ratings %}
+                    {% ratings post %}
+                
                     <div class="text2">
                         <a target="blank" href="{{post.url}}" style="color:black; text-decoration:none;"><strong>Visit</strong>
                         </a>
@@ -68,6 +74,7 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js'%}"></script>
 {% for post in posts %}
 
 {% endfor %}
