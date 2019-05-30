@@ -2,6 +2,12 @@
 
 #### An application that allows a user to post a project he/she has created and get it reviewed by his/her peers.
 
+>-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![App](/ststic/img/view.png)
+
+>-------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Description
 
 aWWWards is a web app where users submit their projects and other users get to review and rate them.The inspiration behind this project is from the [awwwards](https://www.awwwards.com/) app.
